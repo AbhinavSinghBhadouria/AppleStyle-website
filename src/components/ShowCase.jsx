@@ -10,7 +10,6 @@ const Showcase = () => {
 
   useGSAP(() => {
     if (!isTablet) {
-      // Initial state
       gsap.set(".content", { opacity: 0, y: 100 });
 
       const timeline = gsap.timeline({
@@ -33,7 +32,6 @@ const Showcase = () => {
           ease: "power1.in",
         });
     } else {
-      // Mobile / tablet: always visible
       gsap.set(".content", { opacity: 1, y: 0 });
     }
   }, [isTablet]);
